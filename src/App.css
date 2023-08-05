@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1px; /* You can adjust the padding as needed */
+  box-sizing: border-box; /* This ensures padding is included in the width calculation */
+}
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the header */
+.title {
+  background-color: purple;
+  color: white;
+  text-align: center;
+  padding: 20px; 
+}
+
+.title p {
+  line-height: 40px; 
+}
+
+.greeting{
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  animation:reverse;
+  animation-delay: 1000ms;
+  box-shadow: inset;
+}
