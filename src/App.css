@@ -68,9 +68,66 @@ body, h1, p {
 
 .greeting{
   text-align: center;
-  font-style: italic;
-  font-weight: 400;
   animation:reverse;
   animation-delay: 1000ms;
   box-shadow: inset;
+  font-weight: 600;
 }
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; /* Adjust the margin-top value as needed */
+}
+
+.box {
+  flex: 1;
+  padding: 1px;
+  text-align: center;
+  margin-right: 20px; /* Add space between the boxes */
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 1px; /* Adjust the margin-top value as needed */
+}
+
+.content-box {
+  flex: 1;
+  padding: 20px;
+  border: 3px solid #0095ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 30px; /* Add space between the content boxes */
+  border-radius: 20px;
+  height: 75px; /* Set a fixed height for the content boxes */
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+

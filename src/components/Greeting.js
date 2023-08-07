@@ -16,7 +16,11 @@ function Greeting(){
     }
 
     return (
-        <h2 className="greeting">Good {timeofday}</h2>
+      <div>
+        <div class="horizontal-line"></div>
+          <h2 className="greeting">Good {timeofday}</h2>
+        <div class="horizontal-line"></div>
+      </div>
     )
 }
 
