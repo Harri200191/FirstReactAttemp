@@ -30,6 +30,9 @@ function ThreeComps() {
                 <p>Google Certified IT Automation Expert.</p>
             </div>
         </div>
+
+        <br></br>
+        <hr></hr>
     </div>
     )
 }
