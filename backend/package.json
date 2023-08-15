@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harri200191/FirstReactAttemp.git"
+  },
+  "keywords": [
+    "First",
+    "Web",
+    "Page"
+  ],
+  "author": "Haris Rehman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harri200191/FirstReactAttemp/issues"
+  },
+  "homepage": "https://github.com/Harri200191/FirstReactAttemp#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
