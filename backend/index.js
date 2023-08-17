@@ -16,7 +16,7 @@ console.warn(res);
 //fs.writeFileSync("./backend/Temp.txt", "This is just an example file");
 console.log(__dirname.blue);
 
-function dataControl(req, resp){
+const dataControl(req, resp) => {
     res.write("This is Haris Rehman Here!");
     res.end();
 }
