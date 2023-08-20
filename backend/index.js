@@ -4,6 +4,7 @@ const app = require("./app.js");
 const arr = [1,2,3,4,5,6,7,8,4];
 const http = require("http");
 const colors = require("colors");
+const data = require("./data.js");
 
 console.log(app.z());
 
@@ -24,4 +25,10 @@ const dataControl = (req, resp) => {
 //http.createServer(dataControl).listen(4500);
 
 console.log("Hello".random);
+console.log("Testing For Nodemon");
 
+http.createServer((req, res) =>{
+    res.writeHead(200, {"Content-Type": "application\json"});
+    res.write(JSON.stringify(data));
+    res.end();
+}).listen(5000);
