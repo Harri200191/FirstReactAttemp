@@ -33,7 +33,6 @@ http.createServer((req, res) =>{
     res.end();
 }).listen(5000);
 
-console.log(process.argv[2]);
 const input = process.argv;
 
 if (input[2] == 'add'){
