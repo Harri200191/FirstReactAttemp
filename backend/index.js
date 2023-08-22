@@ -26,13 +26,6 @@ const dataControl = (req, resp) => {
 
 console.log("Hello".random);
 console.log("Testing For Nodemon");
-
-http.createServer((req, res) =>{
-    res.writeHead(200, {"Content-Type": "application\json"});
-    res.write(JSON.stringify(data));
-    res.end();
-}).listen(5000);
-
 const input = process.argv;
 
 if (input[2] == 'add'){
@@ -44,3 +37,24 @@ else if(input[2] == "remove"){
 else{
     console.log("Invalid");
 }
+
+http.createServer((req, res) =>{
+    res.writeHead(200, {"Content-Type": "application\json"});
+    res.write(JSON.stringify(data));
+    res.end();
+}).listen(5000);
+
+const path = require("path");
+const DirPath = path.join(__dirname, "TEST_FOLDER");
+console.warn(DirPath);
+
+for (i = 0; i<4; i++){
+    fs.writeFileSync(DirPath + "/test"+i+".txt", "A test file");
+}
+
+fs.readdir(DirPath, (err, files)=>{
+    console.warn(files);
+    files.forEach((items) => {
+        console.log(items);
+    })
+});
