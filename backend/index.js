@@ -38,13 +38,14 @@ else{
     console.log("Invalid");
 }
 
-http.createServer((req, res) =>{
+/* http.createServer((req, res) =>{
     res.writeHead(200, {"Content-Type": "application\json"});
     res.write(JSON.stringify(data));
     res.end();
-}).listen(5000);
+}).listen(5000); */
 
 const path = require("path");
+const { dir } = require("console");
 const DirPath = path.join(__dirname, "TEST_FOLDER");
 console.warn(DirPath);
 
@@ -61,4 +62,20 @@ fs.readdir(DirPath, (err, files)=>{
 
 fs.readFile(DirPath+"/test1.txt", 'utf8', (err, item) => {
     console.log(item);
+})
+
+fs.appendFile(DirPath+"/test1.txt", "\nAdded info", (err) => {
+    if (!err){
+        console.log("File is updated");
+    }
+});
+
+fs.readFile(DirPath+"/test1.txt", 'utf8', (err, item) => {
+    console.log(item);
+})
+
+fs.rename(DirPath+"/test2.txt", DirPath+"/renamed.txt", (err) => {    
+    if (!err){
+        console.log("File is renamed");
+    }
 })
