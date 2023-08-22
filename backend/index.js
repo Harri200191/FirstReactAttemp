@@ -44,7 +44,7 @@ else{
     res.end();
 }).listen(5000); */
 
-const path = require("path");
+/* const path = require("path");
 const { dir } = require("console");
 const DirPath = path.join(__dirname, "TEST_FOLDER");
 console.warn(DirPath);
@@ -79,3 +79,24 @@ fs.rename(DirPath+"/test2.txt", DirPath+"/renamed.txt", (err) => {
         console.log("File is renamed");
     }
 })
+
+fs.unlinkSync(DirPath+"/test0.txt") */
+
+// Example of async language NodeJS. 
+let a = 10;
+let b = 0;
+
+//setTimeout(()=>{b = 20}, 2000);
+
+let waitingdata = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve(20);
+    }, 2000);
+})
+
+waitingdata.then((data) => {
+    console.log(a+data)
+})
+
+console.log(a+b); 
+// Answer is 10 as all processes occur and once and dont wait for other to end 
