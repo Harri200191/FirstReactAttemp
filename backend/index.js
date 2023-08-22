@@ -58,3 +58,7 @@ fs.readdir(DirPath, (err, files)=>{
         console.log(items);
     })
 });
+
+fs.readFile(DirPath+"/test1.txt", 'utf8', (err, item) => {
+    console.log(item);
+})
