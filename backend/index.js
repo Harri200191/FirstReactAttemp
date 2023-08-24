@@ -91,7 +91,7 @@ let b = 0;
 let waitingdata = new Promise((resolve, reject) => {
     setTimeout(()=>{
         resolve(20);
-    }, 2000);
+    }, 500);
 })
 
 waitingdata.then((data) => {
@@ -100,3 +100,17 @@ waitingdata.then((data) => {
 
 console.log(a+b); 
 // Answer is 10 as all processes occur and once and dont wait for other to end 
+
+console.log("Starting up");
+
+// Set timeout is a function that was written in C/C++
+// So it is stored in the Node API area of NodeJS, not in the call stack.
+setTimeout(() => {
+    console.log("2 function");
+}, 2000);
+
+setTimeout(() => {
+    console.log("0 Function");
+}, 0);
+
+console.log("Finishing up")
