@@ -6,6 +6,7 @@ const http = require("http");
 const colors = require("colors");
 const data = require("./data.js");
 
+
 console.log(app.z());
 
 let res = arr.filter((item)=>{
@@ -114,3 +115,41 @@ setTimeout(() => {
 }, 0);
 
 console.log("Finishing up")
+/* First main() is called in call stack(). Settimeout() functions are called in NodeAPI
+Both functions go in callback que with turns but by the time they stay there, main()
+gets removed from the call stack. Then the 0 function goes in the call stack. */
+
+// -----------------------------------------------------
+//                      EXPRESS JS
+// --------------------------------------------------------
+const express = require("express");
+const appl = express();
+
+/*// '' is used to show root page or home screen
+appl.get('', (req, res) => {
+    // returns request object sent using url bar ? mark 
+    console.log("Data sent by browser: ", req.query); 
+    res.send("<h1>Hello, this is home page</h1><a href = '/about'>Go to about us page</a><br><a href = '/help'>Go to help us page</a>");
+});
+
+appl.get('/about', (req, res) => {
+    res.send("Hello, this is about us page. DO YOU NEED OUR CONTACT INFO? <br><a href = '/help'>Go to help us page</a><br><a href = '/'>Go to home page</a>");
+});
+
+
+appl.get('/help', (req, res) => {
+    res.send(data);
+    res.send("<br><a href = ''>Go to home page</a>");
+});
+
+appl.listen(4000); */
+
+//-------------------------------
+//      Loading HTML pages
+//-------------------------------
+const path = require("path");
+const PublicPath = path.join('C:\\Users\\haris\\WEB DEV\\FirstReactAttemp\\', "public");
+
+appl.use(express.static(PublicPath));
+
+appl.listen(4000);
